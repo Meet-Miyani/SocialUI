@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.viewslib.elasticanimviews.ElasticConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="5dp"
+    android:background="@drawable/ic_1_1_feed_background"
+    app:flexEnabled="true"
+    app:flexibility="1.0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/feedTitleSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="10:1.75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/headerVerticalStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/headerVerticalEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+        <com.example.viewslib.circleimageview.CircleImageView
+            android:id="@+id/feedUserProfile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/test"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.65"
+            app:layout_constraintStart_toEndOf="@id/headerVerticalStart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/feedUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:text="meet_miyani_"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/feedUserPostTime"
+            app:layout_constraintStart_toEndOf="@id/feedUserProfile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/feedUserPostTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:text="10 Mins Ago"
+            android:textColor="@color/lightGreyFontColor"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/feedUserProfile"
+            app:layout_constraintTop_toBottomOf="@id/feedUserName" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_more_options_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/headerVerticalEnd"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.5"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.viewslib.portershape.PorterShapeImageView
+        android:id="@+id/feedImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/test"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd"
+        app:layout_constraintStart_toStartOf="@id/verticalStart"
+        app:layout_constraintTop_toBottomOf="@id/feedTitleSection"
+        app:siShape="@drawable/ic_1_1_feed_mask" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/feedBottomSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="5:1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feedImage">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomVerticalStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomVerticalEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <com.example.viewslib.elasticviews.ElasticImageView
+            android:id="@+id/btnLikeFeedPost"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="9dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_like_new_icon"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/bottomVerticalStart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnCommentFeedPost"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_comment_icon"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@id/btnLikeFeedPost"
+            app:layout_constraintTop_toTopOf="@id/btnLikeFeedPost" />
+
+        <ImageView
+            android:id="@+id/btnSendFeedPost"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_send_icon"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@id/btnCommentFeedPost"
+            app:layout_constraintTop_toTopOf="@id/btnLikeFeedPost" />
+
+        <TextView
+            android:id="@+id/tvLikesCountFeedPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:text="299"
+            android:textColor="@color/lighterGreyFontColor"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/bottomVerticalStart"
+            app:layout_constraintTop_toBottomOf="@id/btnLikeFeedPost" />
+
+        <TextView
+            android:id="@+id/tvLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:text=" Likes"
+            android:textColor="@color/lightGreyFontColor"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvLikesCountFeedPost"
+            app:layout_constraintStart_toEndOf="@id/tvLikesCountFeedPost"
+            app:layout_constraintTop_toTopOf="@id/tvLikesCountFeedPost" />
+
+        <ImageView
+            android:id="@+id/likesCommentsSeparator"
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_marginHorizontal="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/small_dot"
+            app:layout_constraintBottom_toBottomOf="@id/tvLikesCountFeedPost"
+            app:layout_constraintStart_toEndOf="@id/tvLikes"
+            app:layout_constraintTop_toTopOf="@id/tvLikesCountFeedPost" />
+
+        <TextView
+            android:id="@+id/tvCommentsCountFeedPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:text="29"
+            android:textColor="@color/lighterGreyFontColor"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@id/likesCommentsSeparator"
+            app:layout_constraintTop_toTopOf="@id/tvLikesCountFeedPost" />
+
+        <TextView
+            android:id="@+id/tvComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:text=" Comments"
+            android:textColor="@color/lightGreyFontColor"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvLikesCountFeedPost"
+            app:layout_constraintStart_toEndOf="@id/tvCommentsCountFeedPost"
+            app:layout_constraintTop_toTopOf="@id/tvLikesCountFeedPost" />
+
+        <TextView
+            android:id="@+id/tvUserNameAndCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="meet_miyani_"
+            android:textColor="@color/lighterGreyFontColor"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/tvLikesCountFeedPost"
+            app:layout_constraintTop_toBottomOf="@id/tvLikesCountFeedPost" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0125" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9875" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.179" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+</com.example.viewslib.elasticanimviews.ElasticConstraintLayout>

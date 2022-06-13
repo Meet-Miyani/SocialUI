@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<declare-styleable name="ElasticStyle">
+
+    <attr name="flexibility" format="float" />
+    <attr name="flexEnabled" format="boolean"/>
+
+</declare-styleable>
+
+</resources>

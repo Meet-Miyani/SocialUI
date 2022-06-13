@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="640dp"
+    android:height="940dp"
+    android:viewportWidth="640"
+    android:viewportHeight="940">
+  <path
+      android:pathData="M50,0L590,0A50,50 0,0 1,640 50L640,890A50,50 0,0 1,590 940L50,940A50,50 0,0 1,0 890L0,50A50,50 0,0 1,50 0z"
+      android:fillColor="@color/feedsCardColor"/>
+</vector>
