@@ -96,12 +96,12 @@ class ElasticAnimation(private val view: View) {
         .scaleY(scaleY)
         .setInterpolator(CycleInterpolator(DEFAULT_ANIMATION_ANCHOR)).apply {
           listener?.let { setListener(it) } ?: setListener(object : ViewPropertyAnimatorListener {
-            override fun onAnimationCancel(view: View?) = Unit
-            override fun onAnimationStart(view: View?) {
+            override fun onAnimationCancel(view: View) = Unit
+            override fun onAnimationStart(view: View) {
               isAnimating = true
             }
 
-            override fun onAnimationEnd(view: View?) {
+            override fun onAnimationEnd(view: View) {
               finishListener?.onFinished()
               isAnimating = false
             }
